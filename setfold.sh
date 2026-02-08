@@ -84,5 +84,17 @@ else
     echo "Fatal Error: Could not create directory."
 fi
 
+    echo "---"
+    echo "Success! Everything created in $(pwd)"
+
+    cd ..
+    sudo chmod -R 777 "$PARENT_DIR"
+    echo "---"
+    echo "Success! Folders created and permissions set."
+else
+    echo "Fatal Error: Could not create directory."
+fi
+
+
 # ---------- Cleanup ----------
 rm -f "$TMP_NAME" "$TMP_CHOICES" "$TMP_EXTRA"
